@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+      font-family: 'popins', sans-serif;
+}
+
+h1{
+      font-size: 2.5rem;
+      font-weight: 700;
+}
+
+h2{
+      font-size: 1.8rem;
+      font-weight: 600;
+}
+
+h3{
+      font-size: 1.4rem;
+      font-weight: 800;
+}
+
+h4{
+      font-size: 1.1rem;
+      font-weight: 600;
+}
+
+h5{
+      font-size: 1rem;
+      font-weight: 400;
+      color: #1d1d1d;
+}
+
+h6{
+      color: #D8D8D8;
+}
+
+
+
+/* BS5 → BS4 quick shim for the cart page */
+.text-end { text-align: right !important; }        /* BS5 → BS4 */
+.ms-auto  { margin-left: auto !important; }        /* BS5 → BS4 */
+.fw-bold { font-weight: 700 !important; }          /* BS5 → BS4 */
+.fw-semibold { font-weight: 600 !important; }      /* helper */
+
+/* gaps (g-2 / g-4) */
+.row.g-2  { margin-left: -0.5rem; margin-right: -0.5rem; }
+.row.g-2 > [class*="col-"] { padding-left: 0.5rem; padding-right: 0.5rem; }
+.row.g-4  { margin-left: -1rem; margin-right: -1rem; }
+.row.g-4 > [class*="col-"] { padding-left: 1rem; padding-right: 1rem; }
+
+/* table-light header look on BS4 */
+.table thead.table-light th { background-color: #f8f9fa; }
+
+
+
+
+
+
+
+
+
+
+button{
+      font-size: 0.8rem;
+      font-weight: 700;
+      outline: none;
+      border: none;
+      background-color: black;
+      color: aliceblue;
+      padding: 13px 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+}
+
+button:hover{
+      background-color: #18524c;
+}
+
+hr{
+      width: 100px;
+      height: 2px;
+      background-color: #fb774b;
+}
+
+.navbar{
+      font-size: 18px;
+      top: 0;
+      left: 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-nav .nav-link{
+      padding: 0 20px;
+      color: black;
+      transition: 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar span:hover,
+.navbar-light .navbar-nav .nav-link.actve,
+.navbar span.active {
+      color: coral;
+}
+
+.navbar span{
+      font-size: 1.2rem;
+      padding: 0 7px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s ease;
+}
+
+#bar{
+      font-size: 1.5rem;
+      padding: 7px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s ease;
+      color: black;
+}
+
+#bar:hover,
+#bar.active{
+      color: white;
+}
+
+@media only  screen and (max-width: 991px){
+      body>nav>div>button:hover,
+      body>nav>div>button:focus {
+            background-color:#18524c;
+      }
+
+      body>nav>div>button:hover #bar,
+      body>nav>div>button:focus #bar {
+            background-color: #fff;
+      }
+
+      #navbarSupportedContent > ul{
+            margin: 1rem;
+            justify-content: flex-end;
+            align-items: flex-end;
+            text-align: right;
+      }
+
+      #navbarSupportedContent > ul > li:nth-child(n) > a{
+            padding: 10px 0;
+      }
+}
+
+#home{
+      background-image: url(image/back2.jpg);
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: top center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+}
+
+#home span{
+      color: coral;
+}
+
+#new .one img{
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+
+#new .one .details{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: 0.3s ease;
+}
+
+#new .one:hover .details{
+      cursor: pointer;
+      background-color: rgba(221, 212, 212, 0.7);
+}
+
+#new h2{
+      color: rgb(198, 130, 130);
+}
+
+#new .one .details button{
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      color: #2a2a2a;
+      background: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 2.5px;
+      transform: translateY(20px);
+}
+
+#new .one .details button:hover{
+      color: #fb774b;
+      border-bottom: 1px solid #fff;
+}
+
+#new .one:nth-child(1) .details{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+}
+
+#new .one:nth-child(2) .details{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+}
+
+#new .one:nth-child(3) .details{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+}
+
+
+/* Products */
+
+.star span{
+      font-size: 0.8rem;
+      color: goldenrod;
+}
+
+.product{
+      cursor: pointer;
+      margin-bottom: 2rem;
+}
+
+.product img{
+      transition: 0.3s all;
+}
+
+.product:hover img{
+      opacity: 0.7;
+}
+
+.product .buy-btn{
+      background: #fb774b;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 0.3s all;
+}
+
+.product:hover .buy-btn{
+      transform: translateY(0);
+      opacity: 1;
+}
+
+.buy-btn:hover{
+      color: black;
+}
+
+
+/* More vertical space in the product-meta box */
+.product-meta {
+      line-height: 1.4; 
+}
+
+.product-meta ul li {
+      margin-bottom: 8px;           /* space between rows */
+}
+
+.product-meta ul li:last-child {
+      margin-bottom: 0;              /* no extra space after the last item */
+}
+
+/* Right column (with icons) – keep a bit more gap */
+.product-meta .info-list li{
+      gap: 8px;
+      margin-bottom: 8px;           /* overrides earlier 6px */
+}
+
+/* Put a uniform gap between items */
+#buy-row{
+      display:flex;               /* ensure it's flex even if classes change */
+      align-items:center;
+      column-gap:12px;            /* space between them */
+      row-gap:8px;                /* when it wraps on small screens */
+      flex-wrap:wrap;
+}
+
+/* Make all three controls the SAME height */
+#buy-row select,
+#buy-row input[type="number"],
+#buy-row .buy-btn{
+      height:44px;                /* adjust to taste: 40–46px */
+      border-radius:6px;
+}
+
+/* Tidy padding so text sits nicely */
+#buy-row select{ padding: 6px 12px; }
+#buy-row input[type="number"]{ width:70px; padding:6px 10px; }
+
+/* Make the button match that height without looking taller */
+#buy-row .buy-btn{
+  display:inline-flex;
+  align-items:center;
+  padding:0 22px;             /* only horizontal padding */
+  margin:0;                   /* remove any stray margins */
+  line-height:1;              /* prevents extra vertical growth */
+}
+
+/* Fallback gap for very old browsers */
+#buy-row > * + * { margin-left:12px; }
+
+
+
+
+
+.categories_link {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categories_link.active {
+      background-color: #333;
+      color: white;            
+}
+
+
+.categories_link:hover {
+      background-color: #fb774b;
+      color: white;
+}
+
+
+
+#banner{
+      background-image: url(image/banner/background.png);
+      width: 100%;
+      height: 60vh;
+      background-size: cover;
+      background-position: top 70px center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+}
+
+
+#banner h4{
+      color: maroon;
+}
+
+#banner h1{
+      color: #18524c;
+}
+
+#banner p{
+      color: gray;
+}
+
+#banner button{
+      background-color: #fb774b;
+}
+
+#banner button:hover{
+      color: #18524c;
+}
+
+
+footer{
+      background-color: #333;
+}
+
+footer h5{
+      color: #D8D8D8;
+      font-weight: 700;
+      font-size: 1.2rem;
+}
+
+footer li{
+      padding-bottom: 4px;
+}
+
+footer li a{
+      font-size: 0.8rem;
+      color: #999;
+}
+
+footer li a:hover{
+      color: #D8D8D8;
+}
+
+footer p{
+      color: #999;
+      font-size: 0.8rem;
+}
+
+
+/* Cart */
+#cart-container{
+      overflow-x: auto;
+}
+
+
+#cart-container table{
+      border-collapse: collapse ;
+      width: 100%;
+      table-layout: fixed;
+      white-space: nowap;
+}
+
+#cart-container table thead{
+      font-weight: 700;
+}
+
+#cart-container table thead td{
+      background: #fb774b;
+      color: #fff;
+      border: none;
+      padding: 6px 0;
+}
+
+#cart-container table td{
+      border: 1px solid #b6b3b3;
+      text-align: center;
+}
+
+#cart-container table td:nth-child(1){
+      width: 100px;
+}
+
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3){
+      width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+      width: 170px;
+}
+
+#cart-container table tbody img{
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+}
+
+
+#cart-container table tbody i{
+      color: #8d8c89;
+
+}
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div{
+      border: 1px solid #b6b3b3;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5{
+      background: #fb774b;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-weight: 700;
+}
+
+
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input{
+      padding: 0 12px;
+}
+
+#cart-bottom .coupon input{
+      height: 44px;
+}
+
+#cart-bottom .coupon input,
+#cart-bottom .coupon button{
+      margin: 0 0 20px 12px;
+}
+
+#cart-bottom .total div>div{
+      padding: 0 12px;
+}
+
+#cart-bottom .total h6{
+      color: #2a2a2a;
+}
+
+.second-hr{
+      background: #b8b7b3;
+      width: 100%;
+      height: 1px;
+}
+
+#cart-bottom .total div>button{
+      margin: 0 12px 20px 0;
+      display: flex;
+      justify-content: flex-end;
+}
+
+/* Make APPLY COUPON match the input height */
+#apply-coupon{
+  padding: .375rem .75rem !important;  /* ~38–40px tall, same as .form-control */
+  line-height: 1.5;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  transition: .3s ease;
+}
+#apply-coupon:hover{
+  background: #18524c !important;
+  color:#fff;
+}
+
+
+
+/* Checkout button hover — match Apply Coupon/Continue Shopping */
+#checkout-btn{
+  transition: .3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#checkout-btn:hover,
+#checkout-btn:focus{
+  background: #18524c !important;
+  border-color: #18524c !important;
+  color: #fff;
+}
+#checkout-btn:active{
+  background: #14433d !important;   /* pressed state */
+  border-color: #14433d !important;
+}
+

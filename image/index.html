@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Style Nest Ecommerce</title>
+
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="style.css">
+      
+      <style>
+            .nav-link-active {
+                  color: #ff5733;
+            }
+            .nav-link-active:hover {
+                  color: #ff5733;}
+      </style>
+</head>
+<body>
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-1 fixed-top">
+            <div class="container">
+                  <img src="image/final_logo.png" alt="">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><span id="bar" class="material-symbols-outlined">menu</span></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                              <a class="nav-link-active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="product.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="account.html">Account</a>
+                        </li>
+                        <li class="nav-item">
+                              <span class="material-symbols-outlined"> search </span>
+                              <span onclick="window.location.href='cart.html';" class="material-symbols-outlined"> shopping_bag </span>
+                        </li> 
+                  </ul>
+            </div>
+      </div>
+      </nav>
+
+      <!--Home Section-->
+      <section id="home">
+            <div onclick="window.location.href='product.html';" class="container">
+                  <h5>Everyone Has A Style Statment, We Make It Yours.</h5>
+                  <h1><span>Best Price</span> This Month</h1>
+                  <p>Remember, Fashion You Can Buy, But Style You Possess.</p>
+                  <button>Shop Now</button>
+            </div>
+      </section>
+
+      <!--Brand Section-->
+      <section id="brand" class="container">
+            <div class="container text-center mt-2 py-5">
+                  <h3>Our Collaborating Brand Partners</h3>
+                  <hr style="margin: 0 auto -80px;">
+            </div>
+            <div class="row m-0 py-4">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/1.png" alt="">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/2.png" alt="">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/3.png" alt="">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/4.png" alt="">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/5.png" alt="">
+                  <img class="img-fluid col-lg-2 col-md-4 col-6" src="image/brand/6.png" alt="">
+            </div>
+      </section>
+
+      <!--Categories Section-->
+      <section id="new" class="w-100">
+            <div class="row p-10 m-0">
+                  <div class="one col-lg-4 col-md-12 col-12 p-0">
+                        <img src="image/sub_section/1.men.jpg" alt="">
+                        <div class="details">
+                              <h2>MEN'S FASHION</h2>
+                              <button onclick="window.location.href='mensproduct.html'" class="text-uppercase">Shop Now</button>
+                        </div>
+                  </div>
+
+                  <div class="one col-lg-4 col-md-12 col-12 p-0">
+                        <img src="image/sub_section/2.women.jpg" alt="">
+                        <div class="details">
+                              <h2>WOMEN'S FASHION</h2>
+                              <button onclick="window.location.href='womensfashion.html'" class="text-uppercase">Shop Now</button>
+                        </div>
+                  </div>
+
+                  <div class="one col-lg-4 col-md-12 col-12 p-0">
+                        <img src="image/sub_section/3.teen.jpg" alt="">
+                        <div class="details">
+                              <h2>TEEN'S FASHION</h2>
+                              <button onclick="window.location.href='product.html'" class="text-uppercase">Shop Now</button>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <!--New Arrival Section-->
+      <section id="featured" class="my-5 pb-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Our New Arrivals</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out our new products with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div onclick="window.location.href='productdetails.html';" class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new1.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Cotton Salwar Kameez</h5>
+                        <h4 class="p-price">TK. 4499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new2.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Silk Salwar Kameez</h5>
+                        <h4 class="p-price">TK. 5499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new3.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Off-white Cotton Saree</h5>
+                        <h4 class="p-price">TK. 4299</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new4.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Light Green Cotton Saree</h5>
+                        <h4 class="p-price">TK. 3799</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new5.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Navy Blue Cotton Formal Shirt</h5>
+                        <h4 class="p-price">TK. 2499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new6.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">White Cotton Formal Shirt</h5>
+                        <h4 class="p-price">TK. 2499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new7.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Semi Fitted Blue Panjabi</h5>
+                        <h4 class="p-price">TK. 3199</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new8.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Semi Fitted Pink Panjabi</h5>
+                        <h4 class="p-price">TK. 3299</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new9.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Red Viscose Salwar Kameez</h5>
+                        <h4 class="p-price">TK. 3199</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new10.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Merun Skirt Top Set</h5>
+                        <h4 class="p-price">TK. 2499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new13.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Red Cotton Sleeve Shirt</h5>
+                        <h4 class="p-price">TK. 1499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/featured/new12.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Multi-Color Cotton Sleeve Shirt</h5>
+                        <h4 class="p-price">TK. 1299</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+            </div>    
+      </section>
+
+      <!--Banner Section-->
+      <section id="banner" class="my-5 py-5">
+            <div class="container">
+                  <h4>MID SEASON'S SALE</h4>
+                  <h1>Super deals On all products</h1>
+                  <p>Save more with purchase coupons & enjoy up to 70% off !!</p>
+                  <button onclick="window.location.href='product.html'" class="text-uppercase">Shop Now</button>
+            </div>
+      </section>
+
+      <!--Featured Saaris-->
+      <section id="saare" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Our Best Selling Sarees</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out our best selling sarees with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare1.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Pink Painted Silk Saree</h5>
+                        <h4 class="p-price">TK. 4999</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare6.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Purple Printed Cotton Saree</h5>
+                        <h4 class="p-price">TK. 3499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare5.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Maroon Printed Muslin Saree</h5>
+                        <h4 class="p-price">TK. 3999</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare3.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Onion Printed Silk Saree</h5>
+                        <h4 class="p-price">TK. 5499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+            </div>    
+      </section>
+
+      <!--Featured Panjabies-->
+      <section id="panjabi" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Our Best Selling Panjabies</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out our best selling panjabies with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/men/panjabi1.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Mauve Printed Cotton Panjabi</h5>
+                        <h4 class="p-price">TK. 2599</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/men/panjabi2.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Beige Embroidered Endi Panjabi</h5>
+                        <h4 class="p-price">TK. 3799</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/men/panjabi5.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Teal Blue Printed Panjabi</h5>
+                        <h4 class="p-price">TK. 3499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/men/panjabi4.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Light Mocha Endi Panjabi</h5>
+                        <h4 class="p-price">TK. 3199</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+            </div>    
+      </section>
+
+      <!--Featured Watches-->
+      <section id="watch" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Our Best Watches</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out our best selling watches with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/w1.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Black Chronograph Watch</h5>
+                        <h4 class="p-price">TK. 1299</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/w2.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Silver Mesh Band Watch</h5>
+                        <h4 class="p-price">TK. 2399</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/w3.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">White Dial Leather Watch</h5>
+                        <h4 class="p-price">TK. 2199</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/w4.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Black & Gold Sport Watch</h5>
+                        <h4 class="p-price">TK. 899</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div> 
+            </div>    
+      </section>
+
+      <!--Featured Shoes-->
+      <section id="shoes" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Our Running Footwears</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out our best selling shoes with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/s1.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Brown High-Top Sneakers</h5>
+                        <h4 class="p-price">TK. 3299</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/s2.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Black Low-Top Sneakers</h5>
+                        <h4 class="p-price">TK. 3199</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/s7.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Brown Low-Top Sneakers</h5>
+                        <h4 class="p-price">TK. 2499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+                  
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/shoes_watch/s4.jpg" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                              <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Black High-Top Sneakers</h5>
+                        <h4 class="p-price">TK. 2899</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+            </div>    
+      </section>
+
+      <!--Footer Section-->
+      <footer class="mt-5 py-5">
+            <div class="row container mx-auto pt-5">
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <img src="image/final_logo.png" alt="" class="pb-2">
+                        <p>Fashion for Every Family,<br>Where Style Meets Comfort.</p>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Categories</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Men</a></li>
+                              <li><a href="#">Women</a></li>
+                              <li><a href="#">Boys</a></li>
+                              <li><a href="#">Girls</a></li>
+                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Accessories</a></li>   
+                        </ul>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Contact Us</h5>
+                        <div>
+                              <h6 class="text-uppercase">Address</h6>
+                              <p>26/3H, Banasree, Rampura</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Phone</h6>
+                              <p>+880 1875-921245</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Email</h6>
+                              <p>stylenest@gmail.com</p>
+                        </div>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Follow Us</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Facebook</a></li>
+                              <li><a href="#">Instagram</a></li>
+                              <li><a href="#">tiktok</a></li>
+                              <li><a href="#">YouTube</a></li>
+                              <li><a href="#">Linkedin</a></li>  
+                        </ul>
+                  </div>
+            </div>
+            <div class="copyright mt-5">
+                  <div class="row container mx-auto">
+                        <div class="col-lg-4 col-md-6 col-12"></div>
+                        <p>StyleNest Fashion eCommerce © 2025. All Rights Reserved by <a href="https://github.com/RobiulHB"> Robiul.</a></p>
+                  </div>
+            </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+</body>
+</html>

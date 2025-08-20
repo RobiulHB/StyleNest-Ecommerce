@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Shopping Cart</title>
+
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      <link rel="stylesheet" href="style.css" />
+
+      <style>
+      body {
+            padding-top: 64px;
+      }
+      
+      .table img { 
+            width:70px; 
+            height:70px; 
+            object-fit:cover; 
+            border-radius:.25rem; 
+            border:1px solid #eee; 
+      }
+
+      .clr{
+            width: 270px;
+            height: 2px;
+            color:coral;
+      }
+
+      .colr{
+            width: 310px;
+            height: 2px;
+            color:gray;
+      }
+
+      .qty-input { 
+            width:80px; 
+      }
+      .btn-remove { 
+            color:#dc3545; 
+      }
+      .btn-remove:hover { 
+            color:#a71d2a; 
+      }
+      .nav-link.active, 
+      .nav-link-active, 
+      .nav-link.active:hover, 
+      .nav-link-active:hover { 
+            color:#ff5733 !important; 
+      }
+      .cart-empty { 
+            border:2px dashed #cfcfcf; 
+            border-radius:8px; 
+            padding:28px; 
+            background:#fafafa; 
+      }
+      </style>
+</head>
+<body>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-1 fixed-top">
+            <div class="container">
+                  <img src="image/final_logo.png" alt="">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><span id="bar" class="material-symbols-outlined">menu</span></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                              <li class="nav-item"><a class="nav-link-active" href="product.html">Products</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                              <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                              <li class="nav-item">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <a href="cart.html" class="material-symbols-outlined" title="Cart">shopping_bag</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
+
+      <!-- Header Section-->
+      <section class="container my-5 pt-5">
+            <h2 class="fw-bold">Your Shopping Cart</h2>
+            <hr class="clr"/>
+      </section>
+
+      <!-- Cart Section-->
+      <section class="container my-5">
+            <div class="row g-4">
+                  <!-- Left Side-->
+                  <div class="col-lg-8">
+                        <!-- Empty state -->
+                        <div id="cart-empty" class="cart-empty text-center d-none mb-3">
+                              <p class="mb-3">Your cart is empty<br><small class="text-muted">Add items from the products page.</small></p>
+                              <button class="buy-btn" onclick="window.location.href='product.html'">CONTINUE SHOPPING</button>
+                        </div>
+                        
+                        <div class="table-responsive">
+                              <table class="table align-middle">
+                                    <thead class="table-light">
+                                          <tr>
+                                                <th>Remove</th>
+                                                <th>Image</th>
+                                                <th>Product</th>
+                                                <th class="text-center">Price</th>
+                                                <th class="text-center">Qty</th>
+                                                <th class="text-end">Total</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody id="cart-body"><!-- new rows injected --></tbody>
+                              </table>
+                        </div>
+
+                        <!-- Coupon Code Part-->
+                        <div class="card mt-3">
+                              <div class="card-body">
+                                    <h5 class="card-title mb-2">Coupon</h5>
+                                    <p class="text-muted mb-3">Enter your coupon code if you have one.</p>
+                                    <div class="row g-2 align-items-center">
+                                          <div class="col-sm-6 col-md-4">
+                                                <input id="coupon-input" type="text" class="form-control" placeholder="Coupon Code" />
+                                          </div>
+                                          <div class="col-auto">
+                                                <button id="apply-coupon" class="btn btn-dark">APPLY COUPON</button>
+                                          </div>
+                                          <div class="col-12 mt-2">
+                                                <small id="coupon-msg" class="d-none"></small>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  
+                  <!-- Right Side -->
+                  <div class="col-lg-4">
+                        <div class="card">
+                              <div class="card-body">
+                                    <h5 class="mb-3">Cart Total</h5>
+                                    <div class="d-flex justify-content-between mb-1">
+                                          <span>Subtotal</span><strong id="subtotal">TK. 0</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1">
+                                          <span>Discount</span><strong id="discount">- TK. 0</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1">
+                                          <span>Shipping</span><strong id="shipping">TK. 0</strong>
+                                    </div>
+                                    <hr class="colr"/>
+                                    <div class="d-flex justify-content-between">
+                                          <span class="h6 mb-0">Total</span>
+                                          <span class="h5 mb-0" id="grand-total">TK. 0</span>
+                                    </div>
+                                    <button id="checkout-btn" class="btn btn-dark w-100 mt-3 text-uppercase">PROCEED TO CHECKOUT</button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <!--Footer Section-->
+      <footer class="mt-5 py-5">
+            <div class="row container mx-auto pt-5">
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <img src="image/final_logo.png" alt="" class="pb-2">
+                        <p>Fashion for Every Family,<br>Where Style Meets Comfort.</p>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Categories</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Men</a></li>
+                              <li><a href="#">Women</a></li>
+                              <li><a href="#">Boys</a></li>
+                              <li><a href="#">Girls</a></li>
+                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Accessories</a></li>   
+                        </ul>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Contact Us</h5>
+                        <div>
+                              <h6 class="text-uppercase">Address</h6>
+                              <p>26/3H, Banasree, Rampura</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Phone</h6>
+                              <p>+880 1875-921245</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Email</h6>
+                              <p>stylenest@gmail.com</p>
+                        </div>
+                  </div>
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Follow Us</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Facebook</a></li>
+                              <li><a href="#">Instagram</a></li>
+                              <li><a href="#">tiktok</a></li>
+                              <li><a href="#">YouTube</a></li>
+                              <li><a href="#">Linkedin</a></li>  
+                        </ul>
+                  </div>
+            </div>
+            <div class="copyright mt-5">
+                  <div class="row container mx-auto">
+                        <div class="col-lg-4 col-md-6 col-12"></div>
+                        <p>StyleNest Fashion eCommerce © 2025. All Rights Reserved by <a href="https://github.com/RobiulHB"> Robiul.</a></p>
+                  </div>
+            </div>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Cookie-based cart logic -->
+      <script>
+      const COOKIE = 'sn_cart';
+      function getCookie(name){
+            const m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([$()*+./?[\\\]^{|}])/g, '\\$1') + '=([^;]*)'));
+            return m ? decodeURIComponent(m[1]) : null;
+      }
+      function setCookie(name, value, days){
+            const max = days ? '; max-age=' + (days*24*60*60) : '';
+            document.cookie = name + '=' + encodeURIComponent(value) + max + '; path=/';
+      }
+      function loadCart(){ try { return JSON.parse(getCookie(COOKIE) || '[]'); } catch(e){ return []; } }
+      function saveCart(items){ setCookie(COOKIE, JSON.stringify(items), 30); }
+      
+      const cartBody   = document.getElementById('cart-body');
+      const cartEmpty  = document.getElementById('cart-empty');
+      const subtotalEl = document.getElementById('subtotal');
+      const shippingEl = document.getElementById('shipping');
+      const discountEl = document.getElementById('discount');
+      const grandEl    = document.getElementById('grand-total');
+
+      const couponInput = document.getElementById('coupon-input');
+      const couponMsg   = document.getElementById('coupon-msg');
+      const applyCouponBtn = document.getElementById('apply-coupon');
+
+      let coupon = { code: null, percent: 0 }; // STYLENEST10 / STYLE10 -> 10%
+
+      const fmt = n => 'TK. ' + Number(n).toLocaleString('en-US');
+      
+      function renderRows(items){
+            cartBody.innerHTML = '';
+            items.forEach((it, idx) => {
+                  const tr = document.createElement('tr');
+                  tr.className = 'cart-row';
+                  tr.dataset.index = idx;
+                  tr.dataset.price = Number(it.price) || 0;
+
+                  const skuOrSize = it.sku ? ('SKU: ' + it.sku)
+                  : (it.variant && !/select/i.test(it.variant) ? ('Size: ' + it.variant) : '');
+
+        tr.innerHTML = `
+          <td>
+            <button class="btn btn-link p-0 btn-remove" aria-label="Remove item" data-index="${idx}">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+          <td><img src="${it.image || ''}" alt="${(it.name||'Product').replace(/"/g,'&quot;')}"></td>
+          <td>
+            <div class="fw-semibold">${it.name || ''}</div>
+            <small class="text-muted">${skuOrSize}</small>
+          </td>
+          <td class="text-end price">${fmt(it.price || 0)}</td>
+          <td class="text-center">
+            <input type="number" class="form-control form-control-sm qty-input" value="${it.qty || 1}" min="1">
+          </td>
+          <td class="text-end row-total">${fmt((it.price || 0) * (it.qty || 1))}</td>
+        `;
+        cartBody.appendChild(tr);
+      });
+    }
+    
+      function rowTotal(tr){
+            const price = Number(tr.dataset.price) || 0;
+            const qtyInput = tr.querySelector('.qty-input');
+            const qty = Math.max(1, Math.min(99, Number(qtyInput.value) || 1));
+            qtyInput.value = qty;
+            const total = price * qty;
+            tr.querySelector('.row-total').textContent = fmt(total);
+            return total;
+      }
+
+      function recalc(items){
+            let subtotal = 0;
+            [...cartBody.querySelectorAll('.cart-row')].forEach(tr => subtotal += rowTotal(tr));
+
+            // Shipping: TK 80 (free ≥ 3000, 0 if empty)
+            const shipping = subtotal === 0 ? 0 : (subtotal >= 3000 ? 0 : 80);
+            const discount = Math.round(subtotal * (coupon.percent/100));
+            const grand = Math.max(0, subtotal - discount + shipping);
+
+            subtotalEl.textContent = fmt(subtotal);
+            shippingEl.textContent = fmt(shipping);
+            discountEl.textContent = '- ' + fmt(discount);
+            grandEl.textContent = fmt(grand);
+
+            // persist qty changes
+            const updated = items.map((it, i) => {
+                  const tr = cartBody.querySelector(`tr[data-index="${i}"]`);
+                  const qty = tr ? Math.max(1, Number(tr.querySelector('.qty-input').value) || 1) : it.qty;
+                  return Object.assign({}, it, { qty });           
+            });
+            saveCart(updated);
+      }
+
+      function renderCart(){
+            const items = loadCart();
+            if (cartEmpty) { items.length ? cartEmpty.classList.add('d-none') : cartEmpty.classList.remove('d-none'); }
+            renderRows(items);
+            recalc(items);
+      }
+
+      // qty change
+      cartBody.addEventListener('input', (e) => {
+            if (e.target.matches('.qty-input')) recalc(loadCart());
+      });
+
+      // remove
+      cartBody.addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-remove');
+            if (!btn) return;
+            const idx = Number(btn.dataset.index);
+            const items = loadCart();
+            items.splice(idx, 1);
+            saveCart(items);
+            renderCart();
+      });
+
+      // coupon
+      function applyCoupon(){
+            const code = (couponInput.value || '').trim().toUpperCase();
+            if (code === 'STYLENEST10' || code === 'STYLE10') {
+                  coupon = { code, percent: 10 };
+                  couponMsg.textContent = 'Coupon applied: 10% off.';
+                  couponMsg.className = 'text-success';
+            } else if (!code) {
+                  coupon = { code: null, percent: 0 };
+                  couponMsg.textContent = 'No coupon applied.';
+                  couponMsg.className = 'text-muted';
+            } else {
+                  coupon = { code: null, percent: 0 };
+                  couponMsg.textContent = 'Invalid coupon.';
+                  couponMsg.className = 'text-danger';
+            }
+            couponMsg.classList.remove('d-none');
+            recalc(loadCart());
+      }
+      applyCouponBtn.addEventListener('click', applyCoupon);
+      couponInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyCoupon(); } });
+      renderCart();
+      </script>
+
+      <script>
+      // ... your existing cart logic above ...
+      // init
+      renderCart();
+
+      // Confirm on checkout
+      const checkoutBtn = document.getElementById('checkout-btn');
+      if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  const items = loadCart();
+                  if (!items.length) {
+                        alert('Your cart is empty.');
+                        return;
+                  }
+                  
+                  // Build a short summary (first 5 items)
+                  const totalText = grandEl.textContent || 'TK. 0';
+                  const count = items.reduce((n, it) => n + (Number(it.qty) || 0), 0);
+                  const list = items.slice(0, 5)
+                  
+                  .map(it => `• ${it.name} × ${it.qty}`)
+                  .join('\n');
+                  const more = items.length > 5 ? `\n…and ${items.length - 5} more` : '';
+
+                  const ok = confirm(
+                        `Confirm checkout?\n\nItems (${count}):\n${list}${more}\n\nTotal: ${totalText}\n\nPress OK to continue.`
+                  );
+                  
+                  // TODO: replace with your real checkout URL
+                  // window.location.href = 'checkout.html';
+                  if (ok) {
+                        alert('Thanks! This would now take you to checkout.');
+                  }
+            });
+      }
+      </script>
+      
+</body>
+</html>
