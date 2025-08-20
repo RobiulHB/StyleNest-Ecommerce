@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cotton Salwar Kameez",
+      "price": 4499,
+      "currency": "TK",
+      "image": "image/featured/new1.webp",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Silk Salwar Kameez",
+      "price": 5499,
+      "currency": "TK",
+      "image": "image/featured/new2.webp",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "Off-white Cotton Saree",
+      "price": 4299,
+      "currency": "TK",
+      "image": "image/featured/new3.jpg",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Light Green Cotton Saree",
+      "price": 3799,
+      "currency": "TK",
+      "image": "image/featured/new4.webp",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "name": "Navy Blue Cotton Formal Shirt",
+      "price": 2499,
+      "currency": "TK",
+      "image": "image/featured/new5.webp",
+      "category": "Men's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "name": "White Cotton Formal Shirt",
+      "price": 2499,
+      "currency": "TK",
+      "image": "image/featured/new6.webp",
+      "category": "Men's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "name": "Semi Fitted Blue Panjabi",
+      "price": 3199,
+      "currency": "TK",
+      "image": "image/featured/new7.webp",
+      "category": "Men's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "name": "Semi Fitted Pink Panjabi",
+      "price": 3299,
+      "currency": "TK",
+      "image": "image/featured/new8.webp",
+      "category": "Men's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "name": "Red Viscose Salwar Kameez",
+      "price": 3199,
+      "currency": "TK",
+      "image": "image/featured/new9.webp",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "name": "Merun Skirt Top Set",
+      "price": 2499,
+      "currency": "TK",
+      "image": "image/featured/new10.webp",
+      "category": "Women's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "name": "Red Cotton Sleeve Shirt",
+      "price": 1499,
+      "currency": "TK",
+      "image": "image/featured/new13.jpg",
+      "category": "Men's Fashion",
+      "rating": 5
+    },
+    {
+      "id": 12,
+      "name": "Multi-Color Cotton Sleeve Shirt",
+      "price": 1299,
+      "currency": "TK",
+      "image": "image/featured/new12.jpg",
+      "category": "Men's Fashion",
+      "rating": 5
+    }
+  ]
+}

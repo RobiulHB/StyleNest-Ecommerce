@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Product Details</title>
+
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css">
+
+      <style>
+            .small-img-group{
+                  display:flex;
+                  justify-content:space-between
+            }
+            .small-img-column{
+                  flex-basis:24%;
+                  cursor:pointer
+            }
+            .sproduct select{
+                  display:block;
+                  padding:5px 10px
+            }
+            .sproduct input{
+                  width:50px;height:40px;
+                  padding-left:10px;
+                  font-size:16px;
+                  margin-right:10px
+            }
+            .sproduct input:focus{
+                  outline:none
+            }
+            .buy-btn{
+                  background:#fb774b;
+                  opacity:1;
+                  transition:0.3s all
+            }
+            .nav-link-active{
+                  color:#ff5733
+            }
+            .nav-link-active:hover{
+                  color:#ff5733
+            }
+
+            .product-meta{
+                  border:1px solid #e9e9e9; 
+                  border-radius:8px; 
+                  background:#fff;
+                  padding:12px 14px;
+            }
+            .product-meta .info-list li{
+                  display:flex; 
+                  align-items:center; 
+                  gap:8px; 
+                  margin-bottom:6px;
+            }
+            .product-meta .material-symbols-outlined{ 
+                  font-size:18px; 
+                  color:#18524c; 
+            }
+            .product-meta strong{ 
+                  color:#2a2a2a; 
+            }
+      </style>
+</head>
+<body>
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-1 fixed-top">
+            <div class="container">
+                  <img src="image/final_logo.png" alt="">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><span id="bar" class="material-symbols-outlined">menu</span></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                              <li class="nav-item"><a class="nav-link-active" href="product.html">Products</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                              <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                              <li class="nav-item">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <a href="cart.html" class="material-symbols-outlined" title="Cart">shopping_bag</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
+
+      <!--Product Details Section-->
+      <section class="container sproduct my-5 pt-5">
+            <div class="row mt-5">
+                  <div class="col-lg-5 col-md-12 col-12">
+                        <img class="img-fluid w-100 pb-1" src="image/prodetails/w1.0.webp" id="MainImg" alt="">
+                        <div class="small-img-group">
+                              <div class="small-img-column"><img src="image/prodetails/w1.1.jpg" width="100%" class="small-img" alt=""></div>
+                              <div class="small-img-column"><img src="image/prodetails/w1.2.jpg" width="100%" class="small-img" alt=""></div>
+                              <div class="small-img-column"><img src="image/prodetails/w1.3.webp" width="100%" class="small-img" alt=""></div>
+                              <div class="small-img-column"><img src="image/prodetails/w1.4.webp" width="100%" class="small-img" alt=""></div>
+                        </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-12">
+                        <h6>Women • Salwar Kameez</h6>
+                        <h2 class="py-4" id="product-name">Cotton Salwar Kameez</h2>
+                        <h2 id="product-price">TK. 4499</h2>
+                        <div class="d-flex align-items-center gap-2 flex-wrap mt-2" id="buy-row">
+                              <select id="size-select" class="form-select" style="width:auto;">
+                                    <option>Select Size</option>
+                                    <option>34</option>
+                                    <option>36</option>
+                                    <option>38</option>
+                                    <option>40</option>
+                                    <option>42</option>
+                              </select>
+                              <input type="number" id="qty-input" class="form-control" value="1" min="1" style="width:70px;">
+                              <button class="buy-btn" id="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                        
+                        <!-- Product related info -->
+                        <div class="product-meta mt-3">
+                              <div class="row g-2">
+                                    <div class="col-sm-6">
+                                          <ul class="list-unstyled small mb-0">
+                                                <li><strong>SKU:</strong> <span id="sku-value">SN-W-SK-1001</span></li>
+                                                <li><strong>Availability:</strong> In stock</li>
+                                                <li><strong>Material:</strong> 100% Cotton</li>
+                                                <li><strong>Care:</strong> Gentle wash, do not bleach</li>
+                                          </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                          <ul class="list-unstyled info-list small mb-0">
+                                                <li><span class="material-symbols-outlined">local_shipping</span> Free delivery over TK. 3,000</li>
+                                                <li><span class="material-symbols-outlined">schedule</span> Delivery: <span id="eta-date"></span></li>
+                                                <li><span class="material-symbols-outlined">autorenew</span> 7-day easy return</li>
+                                                <li><span class="material-symbols-outlined">payments</span> Cash on Delivery available</li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+                        <h4 class="mt-5 mb-3">Product Details :</h4>
+                        <span>This Floral Patterned Cotton Salwar Kameez set is made from soft cotton, featuring delicate embroidery on the white kurta. The comfortable cotton salwar ensures a relaxed fit, while the lightweight chiffon dupatta with a pink and grey gradient print adds a stylish touch. Perfect for casual or semi-formal occasions, this set is available in multiple sizes and easy to care for with gentle washing.</span>
+                  </div>
+            </div>
+      </section>
+      
+      <!--Related Product Section-->
+      <section id="saare" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                  <h3>Related Products</h3>
+                  <hr class="mx-auto">
+                  <p>Here you can check out some related products with fair price on StyleNest.</p>
+            </div>
+
+            <div class="row mx-auto container-fluid">
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare1.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Pink Painted Silk Saree</h5>
+                        <h4 class="p-price">TK. 4999</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare6.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Purple Printed Cotton Saree</h5>
+                        <h4 class="p-price">TK. 3499</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare5.webp" alt="">
+                        <div class="star">
+                              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                        </div>
+                        <h5 class="p-name">Maroon Printed Muslin Saree</h5>
+                        <h4 class="p-price">TK. 3999</h4>
+                        <button class="buy-btn">Buy Now</button>
+                  </div>
+
+                  <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="image/women/saare3.webp" alt="">
+                              <div class="star">
+                                    <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+                              </div>
+                              <h5 class="p-name">Onion Printed Silk Saree</h5>
+                              <h4 class="p-price">TK. 5499</h4>
+                              <button class="buy-btn">Buy Now</button>
+                  </div>
+            </div>
+      </section>
+
+      <!--Footer Section-->
+      <footer class="mt-5 py-5">
+            <div class="row container mx-auto pt-5">
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <img src="image/final_logo.png" alt="" class="pb-2">
+                        <p>Where Style Meets Comfort,<br> Fashion for Every Family.</p>
+                  </div>
+
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Categories</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Men</a></li>
+                              <li><a href="#">Women</a></li>
+                              <li><a href="#">Boys</a></li>
+                              <li><a href="#">Girls</a></li>
+                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Accessories</a></li>   
+                        </ul>
+                  </div>
+
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Contact Us</h5>
+                        <div>
+                              <h6 class="text-uppercase">Address</h6>
+                              <p>26/3H, Banasree, Rampura</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Phone</h6>
+                              <p>+880 1875-921245</p>
+                        </div>
+                        <div>
+                              <h6 class="text-uppercase">Email</h6>
+                              <p>stylenest@gmail.com</p>
+                        </div>
+                  </div>
+
+                  <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                        <h5 class="pb-2 text-uppercase">Follow Us</h5>
+                        <ul class="text-uppercase list-unstyled">
+                              <li><a href="#">Facebook</a></li>
+                              <li><a href="#">Instagram</a></li>
+                              <li><a href="#">tiktok</a></li>
+                              <li><a href="#">YouTube</a></li>
+                              <li><a href="#">Linkedin</a></li>  
+                        </ul>
+                  </div>
+            </div>
+
+            <div class="copyright mt-5">
+                  <div class="row container mx-auto">
+                        <div class="col-lg-4 col-md-6 col-12"></div>
+                        <p>StyleNest Fashion eCommerce © 2025. All Rights Reserved.</p>
+
+                  </div>
+            </div>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+
+      <script>
+            // Image gallery swap (robust)
+            (function(){
+                  var MainImg = document.getElementById('MainImg');
+                  var thumbs = document.getElementsByClassName('small-img');
+                  for (var i=0; i<thumbs.length; i++){
+                        (function(idx){
+                              thumbs[idx].onclick = function(){ if (MainImg) MainImg.src = thumbs[idx].src; };
+                        })(i);
+                  }
+            })();
+      </script>
+
+      <!-- Add to Cart using COOKIE -->
+      <script>
+            (function(){
+                  var COOKIE = 'sn_cart';
+                  function getCookie(name){
+                        var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([$()*+./?[\\\]^{|}])/g, '\\$1') + '=([^;]*)'));
+                        return m ? decodeURIComponent(m[1]) : null;
+                  }
+                  function setCookie(name, value, days){
+                        var max = days ? '; max-age=' + (days*24*60*60) : '';
+                        document.cookie = name + '=' + encodeURIComponent(value) + max + '; path=/';
+                  }
+                  function loadCart(){ try { return JSON.parse(getCookie(COOKIE) || '[]'); } catch(e){ return []; } }
+                  function saveCart(items){ setCookie(COOKIE, JSON.stringify(items), 30); }
+            
+                  var addBtn   = document.getElementById('add-to-cart-btn');
+                  var sizeSel  = document.getElementById('size-select');
+                  var qtyInput = document.getElementById('qty-input');
+                  var nameEl   = document.getElementById('product-name');
+                  var priceEl  = document.getElementById('product-price');
+                  var imgEl    = document.getElementById('MainImg');
+            
+                  if (!addBtn) return;
+                  addBtn.addEventListener('click', function () {
+                        var name = (nameEl && nameEl.textContent) ? nameEl.textContent.trim() : 'Product';
+                        var priceText = (priceEl && priceEl.textContent) ? priceEl.textContent : 'TK. 0';
+                        var price = parseInt(priceText.replace(/[^\d]/g, ''), 10) || 0;
+
+                        var variant = sizeSel ? sizeSel.value : '';
+                        if (sizeSel && (!variant || /select/i.test(variant))) {
+                              alert('Please select a size.');
+                              sizeSel.focus();
+                              return;
+                        }
+                        var qty = Math.max(1, parseInt(qtyInput && qtyInput.value, 10) || 1);
+                        var image = (imgEl && imgEl.src) ? imgEl.src : '';
+                        var id = name.toLowerCase().replace(/\s+/g, '-');
+
+                        // Optional: set a real SKU per product
+                        var sku = 'SN-W-SK-1001';
+
+                        var cart = loadCart();
+                        var existing = cart.find(function(i){ return i.id === id && i.variant === variant; });
+                        if (existing) existing.qty += qty;
+                        else cart.push({ id:id, name:name, variant:variant, price:price, qty:qty, image:image, sku:sku });
+
+                        saveCart(cart);
+                        window.location.href = 'cart.html';
+                  });
+            })();
+      </script>
+
+      <script>
+            (function(){
+                  // Show a 3–5 day delivery window
+                  var eta = document.getElementById('eta-date');
+                  if (eta){
+                        var now = new Date();
+                        var min = new Date(now.getTime() + 3*86400000);
+                        var max = new Date(now.getTime() + 5*86400000);
+                        var fmt = d => d.toLocaleDateString('en-GB', { day:'numeric', month:'short' });
+                        eta.textContent = fmt(min) + ' – ' + fmt(max);
+                  }
+                  // If you want the SKU here to mirror your add-to-cart SKU, set it once:
+                  var skuEl = document.getElementById('sku-value');
+                  if (skuEl) skuEl.textContent = 'SN-W-SK-1001'; // change per product
+                  })();
+      </script>
+
+</body>
+</html>
